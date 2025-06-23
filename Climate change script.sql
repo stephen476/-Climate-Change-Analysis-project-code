@@ -1,4 +1,4 @@
-                                                                          /* SCHEMA CREATION */
+                                                                          /* TABLE CREATION */
 CREATE DATABASE IF NOT EXISTS climate_change_combined;
 
 USE climate_change_combined;
@@ -340,7 +340,7 @@ SELECT Country,
        ROUND(AVG(Temperature), 1) AS Average_Temperature,
        SUM(Population_Exposure) AS Total_Population_Exposure,
        SUM(Economic_Impact_Estimate) AS Total_Economic_Impact,
-       ROUND(AVG(Infrastructure_Vulnerability_Score), 0) AS Average_Vulnerability
+       ROUND(AVG(Infrastructure_Vulnerability_Score), 0) AS Average_Infrastructure_Vulnerability
   FROM climate_change_data
  WHERE DATE BETWEEN '2025-03-03' AND '2025-03-07'
    AND Extreme_Weather_Events != 'None'
@@ -375,6 +375,4 @@ SELECT Biome_Type,
  GROUP BY Biome_Type;
  
  
-
-
 
